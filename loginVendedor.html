@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Vendedor</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-image: url('marco-recife.png'); 
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            background: rgba(255, 255, 255, 0.1); 
+            padding: 30px;
+            border-radius: 15px;
+            backdrop-filter: blur(80px); 
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            width: 350px;
+        }
+
+        h1 {
+            color: #fff;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+
+        .input-field {
+            width: calc(100% - 40px); 
+            max-width: 300px; 
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            background-color: rgba(255, 255, 255, 0.3);
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            color: #333;
+            outline: none;
+            backdrop-filter: blur(5px);
+        }
+
+        .input-field::placeholder {
+            color: #666;
+        }
+
+        .button {
+            background-color: #E63946;
+            color: #fff;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .button:hover {
+            background-color: #1D3557;
+        }
+        .forgot-link {
+        display: block;
+        margin: 10px 0;
+        text-align: center;
+        font-size: 0.9em;
+        color: #fff; 
+        text-decoration: none; 
+        transition: color 0.3s;
+    }
+        .forgot-link:hover {
+            color: #E63946; 
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <h1>Login Vendedor</h1>
+        <form>
+            <input type="email" class="input-field" placeholder="E-mail" id="emailVendedor" required>
+            <input type="password" class="input-field" placeholder="Senha" id="senhaVendedor" required><br><br>
+            <button type="submit" class="button">Entrar</button>
+            <button type="button" class="button secondary" onclick="window.location.href='cadastroVendedor.html'">Cadastrar</button><br><br>
+        </form>
+        <a href="#" class="forgot-link">Esqueceu a senha? Clique aqui</a>
+    </div>
+</body>
+</html>
