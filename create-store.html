@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Nova Loja</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="sidebar">
+        <a href="index.html" class="brand">Netculture</a>
+        <button id="menuProfile"><i class="fas fa-user"></i></button>
+        <button id="menuCreateStore"><i class="fas fa-plus"></i></button>
+    </div>
+    <div class="container">
+        <h1>Criar Nova Loja</h1>
+        <form id="createStoreForm">
+            <label for="storeTitle">Título da Loja:</label>
+            <input type="text" id="storeTitle" placeholder="Digite o título da loja" required>
+
+            <label for="storeDescription">Descrição da Loja:</label>
+            <textarea id="storeDescription" placeholder="Digite a descrição da loja" required></textarea>
+            
+            <label for="storeImageUpload">Upload da Imagem da Loja:</label>
+            <input type="file" id="storeImageUpload" accept="image/*">
+
+            <label for="storeWhatsapp">Número do WhatsApp:</label>
+            <input type="tel" id="storeWhatsapp" placeholder="Digite o número do WhatsApp" required>
+
+            <label for="storeItems">Itens da Loja:</label>
+            <textarea id="storeItems" placeholder="Digite os itens da loja, separados por vírgula" required></textarea>
+
+            <div class="action-buttons">
+                <button type="submit">Criar Loja</button>
+                <button type="button" id="cancelCreate">Cancelar</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

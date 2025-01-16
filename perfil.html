@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Perfil</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="sidebar">
+        <a href="index.html" class="brand">Netculture</a>
+        <button id="menuProfile"><i class="fas fa-user"></i></button>
+        <button id="menuEdit"><i class="fas fa-edit"></i></button>
+        <button id="menuLogout"><i class="fas fa-power-off"></i></button>
+    </div>
+    <div class="container">
+        <h1>Perfil do Usuário: <span th:text="${usuario.nome}">Nome do Usuário</span></h1>
+
+        <div id="userInfo" class="hidden info-section">
+            <p><strong>Nome:</strong> <span th:text="${usuario.nome}">Nome do Usuário</span></p>
+            <p><strong>Email:</strong> <span th:text="${usuario.email}">Email do Usuário</span></p>
+            <p><strong>Telefone:</strong> <span th:text="${usuario.telefone}">Número de Telefone</span></p>
+            <p><strong>Senha:</strong> <span th:text="${usuario.senha}">Senha do Usuário</span></p>
+        </div>
+        
+        <div id="editForm" class="hidden info-section">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" th:value="${usuario.nome}" placeholder="Digite o nome" required>
+        
+            <label for="email">Email:</label>
+            <input type="email" id="email" th:value="${usuario.email}" placeholder="Digite o email" required>
+
+            <label for="phone">Telefone:</label>
+            <input type="tel" id="phone" th:value="${usuario.telefone}" placeholder="Digite o número de telefone" required>
+
+            <label for="password">Senha:</label>
+            <input type="password" id="password" th:value="${usuario.senha}" placeholder="Digite a senha" required>
+
+            <label for="confirmPassword">Repetir Senha:</label>
+            <input type="password" id="confirmPassword" placeholder="Repita a senha" required>
+        
+            <div class="action-buttons">
+            <button id="saveChanges">Salvar</button>
+            <button id="cancelEdit">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
